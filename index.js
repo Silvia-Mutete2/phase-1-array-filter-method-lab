@@ -1,13 +1,13 @@
 
 function findMatching(drivers,value){
     return drivers.filter(function(driver){ 
-        return driver.toLowerCase() === value.toLowerCase()
+        return driver.toLowerCase()=== value.toLowerCase()
      })
   }
   
 function fuzzyMatch(drivers,value){
     return drivers.filter(function(driver){ 
-        return driver.toLowerCase().substring(0,value.length) ===value.toLowerCase() 
+        return driver.toLowerCase().indexOf(value.toLowerCase()) ===0 
     })
   }
   
